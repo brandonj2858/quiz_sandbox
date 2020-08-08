@@ -1,0 +1,26 @@
+.app {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.answer-div {
+  list-style: upper-alpha;
+  float: left;
+  padding-top: 20px;
+  width: 250px;
+}
+
+.options-li {
+  list-style: upper-alpha;
+  margin-left: 20%;
+  text-align: initial;
+}
+
+.options-ul {
+  list-style: none;
+  margin-left: 30%;
+}
+
+.options-li:hover {
+  background: lightgray;
+}
