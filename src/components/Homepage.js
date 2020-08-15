@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import quizzes from '../data/quizzes';
-import messages, { getMessage } from '../data/messages.js';
 import Summary from './Summary';
 
 const Homepage = () => {
@@ -14,7 +13,7 @@ const Homepage = () => {
   const [matching, setMatching] = useState('');
   const [quest, setQuest] = useState(0);
   const [showSummary, setShowSummary] = useState(false);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [newTest, setNewTest] = useState(false);
 
   useEffect(() => {
@@ -76,7 +75,7 @@ const Homepage = () => {
       evt.target.style.textDecoration = 'line-through';
       setCurrentQuestion(currentQuestion + 1);
       setMarked(true);
-      setMatching('Incorrect!');
+      setMatching('Incorrect...');
     }
   };
 
@@ -115,9 +114,8 @@ const Homepage = () => {
 
   const setTest = () => {
     let newTest = selectedTest - 1;
-    console.log(newTest);
+
     setSelectedTest(newTest);
-    console.log(selectedTest);
   };
 
   const nextTest = () => {
@@ -181,7 +179,7 @@ const Homepage = () => {
       </div>
       {marked ? (
         <div>
-          <p> {matching} </p>
+          <p className="marking"> {matching} </p>
           <div className="next-div" onClick={handleNext}>
             Next{' '}
           </div>
