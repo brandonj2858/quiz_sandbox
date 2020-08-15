@@ -138,6 +138,7 @@ const Homepage = () => {
       randomizeAnswers();
 
       setShowSummary(false);
+      setCount(1);
     }
     console.log(selectedTest - 1);
   };
