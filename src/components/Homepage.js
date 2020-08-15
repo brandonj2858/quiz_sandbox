@@ -125,6 +125,7 @@ const Homepage = () => {
       setMarked();
       randomizeAnswers();
       setShowSummary(false);
+      setScore(0);
       setCount(1);
 
       console.log(selectedTest, 'here');
