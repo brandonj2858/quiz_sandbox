@@ -25,14 +25,13 @@ const Homepage = () => {
     if (newTest === true) {
       randomizeAnswers();
       setNewTest(false);
-      console.log('hit');
     }
   }, [selectedTest]);
 
   const randomizeAnswers = () => {
     var answers = '';
     //setOptions();
-    console.log(quizzes[selectedTest]);
+
     answers = quizzes[selectedTest].questions[currentQuestion].incorrectAnswers;
 
     answers.push(
@@ -44,13 +43,8 @@ const Homepage = () => {
       (elem, i, arr, j = getRandomValue(i, arr.length)) =>
         ([arr[i], arr[j]] = [arr[j], arr[i]]),
     );
-    unique.forEach((ele) => {
-      console.log(ele);
-    });
 
     setOptions(unique);
-    console.log(options + ' options');
-    console.log(unique + ' unique');
   };
 
   const getRandomValue = (i, N) => Math.floor(Math.random() * (N - i) + i);
@@ -127,8 +121,6 @@ const Homepage = () => {
       setShowSummary(false);
       setScore(0);
       setCount(1);
-
-      console.log(selectedTest, 'here');
     } else {
       setSelectedTest(selectedTest + 1);
       setNewTest(true);
@@ -141,7 +133,6 @@ const Homepage = () => {
       setShowSummary(false);
       setCount(1);
     }
-    console.log(selectedTest - 1);
   };
 
   return (

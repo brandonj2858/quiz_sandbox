@@ -20,6 +20,10 @@
   border: none;
 }
 
+.options-li:hover {
+  cursor: pointer;
+}
+
 .options-ul {
   list-style: none;
   margin-left: 30%;
@@ -34,6 +38,10 @@
   margin-top: 25px;
   height: 50px;
   line-height: 50px;
+}
+
+.next-div:hover {
+  cursor: pointer;
 }
 
 .next-test {
